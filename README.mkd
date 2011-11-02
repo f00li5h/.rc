@@ -1,0 +1,44 @@
+# what the hell am i looking at?
+
+a thinger for syncing your .rc files between machines 
+
+# why?
+
+so many virtual machines, so many homedirs, so much variation in config...
+
+# FEATURES
+
+- a cute shell based ui so that you can:
+	- tell it about machines
+	- tell it about ssh keys
+	- tell it which configs you care about 
+	- tell it what "class" a machine is from (webserver or something)
+	- tell it what dist the machine runs (so it can account for redhat/debian madness)
+	- tell your shell that you want it running when you login 
+- assorted backends, most likely some kind of vc backend, REST or DAV, scp/rsync 
+- secure and sneaky so your ssh keys don't go anywhere (unless you ask for them to)
+- optoutable, so that you can have different versions of the same file per host
+	(like your public_html/ at work can be more sensible than the one you have on your blog!)
+
+It'll keep your configs uniform, and sensible ... like a user specific cfengine, I suppose 
+
+maybe it should include checks on the version of programs on the machine, so it doesn't install stuff that will break config on old apps?
+
+# USAGE
+
+ ./dot-are-sea
+ .rc> ?
+  init 			set up storage
+  sync 			
+  add 			keep an eye on these files for me
+	--perbox
+  add
+	--redhat-prefix foo bar
+			when syncing on redhat, foo is prefixed by bar ... maybe?
+  unadd 		forget it 
+  
+
+# DESIGN
+
+nope.
+
